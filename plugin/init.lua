@@ -209,7 +209,7 @@ wezterm.on(
     }
 
     local i = tab.tab_index % 6
-    local active_bg = rainbow[i + 1]
+    local active_bg = conf.resolved_palette.indexed[16]
     local active_fg = colours.background
     local inactive_bg = colours.inactive_tab.bg_color
     local inactive_fg = colours.inactive_tab.fg_color
