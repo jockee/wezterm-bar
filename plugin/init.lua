@@ -209,7 +209,7 @@ wezterm.on(
     }
 
     local i = tab.tab_index % 6
-    local active_bg = conf.resolved_palette.indexed[16]
+    local active_bg = conf.resolved_palette.ansi[2]
     local active_fg = colours.background
     local inactive_bg = colours.inactive_tab.bg_color
     local inactive_fg = colours.inactive_tab.fg_color
@@ -233,7 +233,7 @@ wezterm.on(
     elseif tab.tab_index == active_tab_index - 1 then
       s_bg = inactive_bg
       s_fg = inactive_fg
-      e_bg = rainbow[(i + 1) % 6 + 1]
+      e_bg = active_bg
       e_fg = inactive_bg
     elseif tab.is_active then
       s_bg = active_bg
